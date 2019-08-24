@@ -4,3 +4,5 @@ parameters:
   level: max
 #  symfony:
 #    container_xml_path: '%rootDir%/../../../var/cache/dev/srcApp_KernelDevDebugContainer.xml'
+includes:
+  - vendor/ekino/phpstan-banned-code/extension.neon
