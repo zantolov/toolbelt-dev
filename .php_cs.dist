@@ -30,7 +30,14 @@ return PhpCsFixer\Config::create()
             'php_unit_construct' => true,
             'psr4' => true,
             'final_internal_class' => true,
-            'php_unit_strict' => true,
+            'php_unit_strict' => [
+                'assertions' => [
+                    'assertAttributeEquals',
+                    'assertAttributeNotEquals',
+//                    'assertEquals', // This will replace all assertEquals with assertSame that can affect array comparisons
+                    'assertNotEquals',
+                ],
+            ],
             'php_unit_test_case_static_method_calls' => true,
             'strict_comparison' => true,
             'strict_param' => true,
@@ -39,7 +46,9 @@ return PhpCsFixer\Config::create()
             'mb_str_functions' => true,
             'no_multiline_whitespace_before_semicolons' => true,
             'no_php4_constructor' => true,
-            'no_superfluous_phpdoc_tags' => true,
+            'no_superfluous_phpdoc_tags' => [
+                'allow_mixed' => true,
+            ],
             'not_operator_with_space' => true,
             'not_operator_with_successor_space' => true,
             'ordered_interfaces' => true,
