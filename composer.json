@@ -15,5 +15,5 @@
     "require-dev": {
         "phpstan/phpstan": "*"
     },
-    "bin": ["bin/qc-run", "bin/qc-check"]
+    "bin": ["bin/qc-check", "bin/qc-fix"]
 }
