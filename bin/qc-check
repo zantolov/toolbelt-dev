@@ -2,5 +2,5 @@
 
 set -e
 
-PHP_CS_FIXER_IGNORE_ENV=1 PHP_CS_FIXER_FUTURE_MODE=1 php-cs-fixer fix --dry-run --diff --ansi --using-cache=no
-rector --dry-run --ansi --no-progress-bar
+PHP_CS_FIXER_IGNORE_ENV=1 PHP_CS_FIXER_FUTURE_MODE=1 ./vendor/bin/php-cs-fixer fix --dry-run --diff --ansi --using-cache=no
+./vendor/bin/rector --dry-run --ansi --no-progress-bar
