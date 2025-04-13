@@ -4,4 +4,4 @@ set -e
 
 PHP_CS_FIXER_IGNORE_ENV=1 PHP_CS_FIXER_FUTURE_MODE=1 ./vendor/bin/php-cs-fixer fix --diff --ansi --using-cache=no
 ./vendor/bin/phpstan analyse --ansi --memory-limit=-1 --no-progress
-./vendor/bin/rector --ansi --no-progress-bar
+./vendor/bin/rector --ansi --no-progress-bar --dry-run
